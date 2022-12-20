@@ -14,17 +14,14 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(e)
         const displayName = e.target[0].value;
         const email = e.target[1].value;
         const password = e.target[2].value;
         const file = e.target[3].value;
 
-        console.log(displayName, email, password, file);
         debugger
         try {
             const res = await createUserWithEmailAndPassword(auth, email, password);
-            console.log("res", res);
 
             const storageRef = ref(storage, displayName);
 
@@ -43,6 +40,11 @@ const Register = () => {
                     email,
                     // photoURL: downloadURL,
                 });
+                    await updateProfile(res.user, {
+                    displayName,
+                    // photoURL: downloadURL
+                })
+                                navigate("/");
             // Upload completed successfully, now we can get the download URL
             // getDownloadURL(uploadTask.snapshot.ref).then( async(downloadURL) => {
             //     console.log('File available at', downloadURL);

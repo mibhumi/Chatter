@@ -10,20 +10,17 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        debugger
         e.preventDefault();
         const email = e.target[0].value;
         const password = e.target[1].value;
     
         try {
-            console.log("inside try");
           await signInWithEmailAndPassword(auth, email, password);
           navigate("/")
         } catch (err) {
-            console.log("inside catch");
           setErr(true);
         }
-    };
+      };
 
     return(
         <div className="formWrapper">
