@@ -1,6 +1,9 @@
 # Chatter
 Chatter is real time chat application. This application built using Firebase, React, SCSS and RESTful Web Service.
 
+<img width="1440" alt="Screen Shot 2022-12-21 at 1 56 21 AM" src="https://user-images.githubusercontent.com/30569172/208847576-4e1b807d-a89d-4d67-9d95-b0677e217a96.png">
+
+
 # Features
   - Uses React as the single page application.
   - Real-time communication where logged user can chat with multiple user.
