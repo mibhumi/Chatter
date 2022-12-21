@@ -82,11 +82,11 @@ const Register = () => {
                     <input type="text" placeholder="Enter your name"/>
                     <input type="email" placeholder="Enter email"/>
                     <input type="password" placeholder="Enter password"/>
-                    <input style={{display: "none"}} type="file" id="dp"/>
+                    {/* <input style={{display: "none"}} type="file" id="dp"/>
                     <label htmlFor="dp">
                         <img src={addAvatar} />
                         <span>Add Profile Photo</span>
-                    </label>
+                    </label> */}
                     <button>Sign Up</button>
                     { err ? <span>{err}</span> : null}
                 </form>
