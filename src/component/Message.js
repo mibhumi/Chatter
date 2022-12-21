@@ -14,10 +14,14 @@ const Message = ({message}) => {
     }, [message]);
 
     return(
-        <div className="message owner" ref={ref}>
+        <div className={`message ${message.sendId === currentUser.uid && "owner"}`} ref={ref}>
             <div className="messageInfo">
-                <img src="https://images.pexels.com/photos/11586570/pexels-photo-11586570.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="" />
-                <span>Just now</span>
+                <img src= {
+                    message.sendId === currentUser.uid ? "https://images.pexels.com/photos/4545786/pexels-photo-4545786.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                    : "https://images.pexels.com/photos/11586570/pexels-photo-11586570.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+                }
+                 alt="" />
+                <span>Just Now</span>
             </div>
             <div className="messageContent">
                 <p>{message.text}</p>
