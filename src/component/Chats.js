@@ -34,7 +34,7 @@ const Chats = () => {
             {
                 chats && Object.entries(chats)?.sort((a,b)=>b[1].date - a[1].date).map((chat) => (
                     <div className="userChat" key={chat[0]}>
-                        <img src="https://images.pexels.com/photos/11586570/pexels-photo-11586570.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt="" />
+                        <img src={`https://avatars.dicebear.com/api/adventurer/${chat[1].userInfo.uid}.svg`} alt="" />
                         <div 
                             className="userChatInfo"
                             onClick={() => handleSelect(chat[1].userInfo)}
