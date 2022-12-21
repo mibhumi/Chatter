@@ -7,8 +7,6 @@ const Navbar = () => {
 
     const {currentUser} = useContext(AuthContext);
 
-    console.log("current user of nav bar", currentUser);
-
     return(
         <div className="navbar">
             <span className="logo">Chatter</span>
