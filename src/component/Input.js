@@ -49,9 +49,6 @@ const Input = () => {
                 })
             });
 
-            debugger
-            console.log("data", data);
-
             await updateDoc(doc(db, "userChats", currentUser.uid), {
                 [data.chatId + ".lastMessage"]: {
                   text,
