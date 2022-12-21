@@ -22,7 +22,7 @@ const Input = () => {
             const uploadTask = uploadBytesResumable(storageRef, img);
             uploadTask.on(
                 (error) => {
-                    console.log("upload error", error);
+                    console.warn("upload error", error);
                 },
                 () => {
                   getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {

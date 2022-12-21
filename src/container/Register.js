@@ -79,10 +79,10 @@ const Register = () => {
                 <span className="logo" >Chatter</span>
                 <span className="title">Register</span>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="Enter your name"/>
-                    <input type="email" placeholder="Enter email"/>
-                    <input type="password" placeholder="Enter password"/>
-                    <input style={{display: "none"}} type="file" id="dp"/>
+                    <input type="text" placeholder="Enter your name" required/>
+                    <input type="email" placeholder="Enter email" required/>
+                    <input type="password" placeholder="Enter password" required/>
+                    <input style={{display: "none"}} type="file" id="dp" required/>
                     <label htmlFor="dp">
                         <img src={addAvatar} />
                         <span>Add Profile Photo</span>

@@ -28,8 +28,8 @@ const Login = () => {
                 <span className="logo" >Chatter</span>
                 <span className="title">Log In</span>
                 <form onSubmit={handleSubmit}>
-                    <input type="email" placeholder="Enter email"/>
-                    <input type="password" placeholder="Enter password"/>
+                    <input type="email" placeholder="Enter email" required/>
+                    <input type="password" placeholder="Enter password" required/>
                     <button>Sign In</button>
                 </form>
                 <p>Don't have an account? <Link to="/register">Sign Up</Link></p>
