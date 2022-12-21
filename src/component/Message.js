@@ -16,10 +16,7 @@ const Message = ({message}) => {
     return(
         <div className={`message ${message.sendId === currentUser.uid && "owner"}`} ref={ref}>
             <div className="messageInfo">
-                <img src= {
-                    message.sendId === currentUser.uid ? "https://images.pexels.com/photos/4545786/pexels-photo-4545786.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-                    : "https://images.pexels.com/photos/11586570/pexels-photo-11586570.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
-                }
+                <img src={`https://avatars.dicebear.com/api/adventurer/${message.sendId}.svg`}
                  alt="" />
                 <span>Just Now</span>
             </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
         <div className="navbar">
             <span className="logo">Chatter</span>
             <div className="user">
-                <img src="https://images.pexels.com/photos/4545786/pexels-photo-4545786.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" alt=""/>
+                <img src={`https://avatars.dicebear.com/api/adventurer/${currentUser.uid}.svg`} alt=""/>
                 <span>{currentUser.displayName}</span>
                 <button onClick={()=>signOut(auth)}>Logout</button>
             </div>
